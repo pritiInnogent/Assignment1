@@ -18,16 +18,17 @@ class Factorial {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a number to find factorial: ");
-        int num = sc.nextInt();
-
-        // ---------- MEMORY MANAGEMENT & LIMIT CHECK ----------
-        // Each recursive call consumes stack memory for:
-        //  - Function call frame
-        //  - Local variables
-        //  - Return address
-        //
-        /
+            System.out.println("Enter a number") ; 
+        int num =0 ; 
+         while (true){
+          try{
+           num = sc.nextInt();
+           break ; 
+          } catch( InputMismatchException e ){
+             System.out.println("Invalid Input , enter integer ") ; 
+             sc.nextLine() ; 
+          }
+         }
 
         if (num < 0) {
             System.out.println(" Factorial not defined for negative numbers.");
@@ -44,6 +45,7 @@ class Factorial {
         sc.close();
     }
 }
+
 
 
 
